@@ -13,18 +13,21 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    image3: TImage;
+    Label1: TLabel;
     loadButton: TButton;
+    RadioGroup1: TRadioGroup;
     saveButton: TButton;
     closeButton: TButton;
-    text1: TEdit;
-    text2: TEdit;
+    embedTxt: TEdit;
+    extractTxt: TEdit;
     embedButton: TButton;
     extractButton: TButton;
     image1: TImage;
     image2: TImage;
     openPictureDialog: TOpenPictureDialog;
     savePictureDialog: TSavePictureDialog;
-    procedure text1Change(Sender: TObject);
+    procedure embedTxtChange(Sender: TObject);
     procedure embedButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -52,7 +55,7 @@ begin
 
 end;
 
-procedure TForm1.text1Change(Sender: TObject);
+procedure TForm1.embedTxtChange(Sender: TObject);
 begin
 
 end;
