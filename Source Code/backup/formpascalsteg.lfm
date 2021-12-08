@@ -1,114 +1,100 @@
 object Form1: TForm1
-  Left = 902
-  Height = 879
-  Top = 103
+  Left = 481
+  Height = 750
+  Top = 37
   Width = 944
   Caption = 'PascalSteg'
-  ClientHeight = 879
+  ClientHeight = 750
   ClientWidth = 944
   OnCreate = FormCreate
   LCLVersion = '2.0.12.0'
   object embedButton: TButton
-    Left = 160
+    Left = 248
     Height = 25
-    Top = 128
+    Top = 62
     Width = 75
     Caption = 'Embed'
     OnClick = embedButtonClick
     TabOrder = 0
   end
   object extractButton: TButton
-    Left = 696
+    Left = 264
     Height = 25
-    Top = 128
+    Top = 678
     Width = 75
     Caption = 'Extract'
     OnClick = embedButtonClick
     TabOrder = 1
   end
-  object image1: TImage
-    Left = 64
-    Height = 300
-    Top = 168
-    Width = 300
+  object originalImage1: TImage
+    Left = 24
+    Height = 264
+    Top = 112
+    Width = 280
+    OnClick = OriginalImage1Click
   end
-  object image2: TImage
-    Left = 560
-    Height = 300
-    Top = 168
-    Width = 300
+  object embedImage1: TImage
+    Left = 472
+    Height = 264
+    Top = 112
+    Width = 304
+    OnClick = embedImage1Click
   end
-  object embedTxt: TEdit
-    Left = 104
+  object embedText: TEdit
+    Left = 32
     Height = 23
-    Top = 96
+    Top = 62
     Width = 208
-    OnChange = embedTxtChange
+    OnChange = embedTextChange
     TabOrder = 2
     TextHint = 'Message to Embed'
   end
-  object extractTxt: TEdit
-    Left = 624
+  object extractText: TEdit
+    Left = 32
     Height = 23
-    Top = 96
+    Top = 680
     Width = 208
-    OnChange = embedTxtChange
+    OnChange = embedTextChange
     TabOrder = 3
     TextHint = 'Embedded Message'
   end
   object loadButton: TButton
-    Left = 40
+    Left = 8
     Height = 25
-    Top = 24
+    Top = 16
     Width = 75
     Caption = 'Load'
     OnClick = embedButtonClick
     TabOrder = 4
   end
   object saveButton: TButton
-    Left = 160
+    Left = 96
     Height = 25
-    Top = 24
+    Top = 16
     Width = 75
     Caption = 'Save'
     OnClick = embedButtonClick
     TabOrder = 5
   end
   object closeButton: TButton
-    Left = 280
+    Left = 184
     Height = 25
-    Top = 24
+    Top = 16
     Width = 75
     Caption = 'Close'
     OnClick = embedButtonClick
     TabOrder = 6
   end
-  object image3: TImage
-    Left = 64
-    Height = 300
-    Top = 512
-    Width = 300
+  object embedImage2: TImage
+    Left = 24
+    Height = 264
+    Top = 408
+    Width = 280
   end
-  object Label1: TLabel
-    Left = 80
-    Height = 30
-    Top = 824
-    Width = 259
-    Caption = 'After Message is Embedded'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -21
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-    OnClick = Label1Click
-  end
-  object RadioGroup1: TRadioGroup
-    Left = 396
+  object radioLoadOption: TRadioGroup
+    Left = 272
     Height = 58
-    Top = 24
+    Top = 0
     Width = 102
     AutoFill = True
     AutoSize = True
@@ -129,12 +115,79 @@ object Form1: TForm1
     )
     TabOrder = 7
   end
+  object labelOriginalImage1: TLabel
+    Left = 104
+    Height = 21
+    Top = 88
+    Width = 103
+    Caption = 'Original Image'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object labelOriginalImage2: TLabel
+    Left = 568
+    Height = 21
+    Top = 88
+    Width = 95
+    Caption = 'Embed Image'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object labelOriginalImage3: TLabel
+    Left = 104
+    Height = 21
+    Top = 384
+    Width = 95
+    Caption = 'Embed Image'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object originalImage2: TImage
+    Left = 472
+    Height = 264
+    Top = 408
+    Width = 304
+    OnClick = OriginalImage1Click
+  end
+  object labelOriginalImage4: TLabel
+    Left = 576
+    Height = 21
+    Top = 384
+    Width = 103
+    Caption = 'Original Image'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
   object openPictureDialog: TOpenPictureDialog
-    Left = 864
-    Top = 16
+    Left = 512
+    Top = 8
   end
   object savePictureDialog: TSavePictureDialog
-    Left = 760
-    Top = 16
+    Left = 408
+    Top = 8
   end
 end
