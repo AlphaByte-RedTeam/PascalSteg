@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="PascalSteg.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -22,8 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormPascalSteg"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="27"/>
-        <CursorPos X="32" Y="41"/>
+        <TopLine Value="22"/>
+        <CursorPos X="32" Y="48"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -36,8 +36,16 @@
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="109" Y="10"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit3>
     </Units>
-    <JumpHistory Count="27" HistoryIndex="26">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="formpascalsteg.pas"/>
       </Position1>
@@ -145,6 +153,10 @@
         <Filename Value="formpascalsteg.pas"/>
         <Caret Line="55" Column="17" TopLine="26"/>
       </Position27>
+      <Position28>
+        <Filename Value="formpascalsteg.pas"/>
+        <Caret Line="41" Column="32" TopLine="27"/>
+      </Position28>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
