@@ -1,65 +1,65 @@
 object Form1: TForm1
-  Left = 281
-  Height = 750
-  Top = 0
+  Left = 836
+  Height = 865
+  Top = 106
   Width = 1074
   Caption = 'PascalSteg'
-  ClientHeight = 750
+  ClientHeight = 865
   ClientWidth = 1074
   OnCreate = FormCreate
   LCLVersion = '2.0.12.0'
   object embedButton: TButton
-    Left = 560
+    Left = 528
     Height = 25
-    Top = 66
-    Width = 75
+    Top = 400
+    Width = 67
     Caption = 'Embed'
     OnClick = embedButtonClick
     TabOrder = 0
   end
   object extractButton: TButton
-    Left = 909
+    Left = 528
     Height = 25
-    Top = 520
+    Top = 806
     Width = 75
     Caption = 'Extract'
     OnClick = embedButtonClick
     TabOrder = 1
   end
   object originalImage1: TImage
-    Left = 240
-    Height = 279
-    Top = 114
-    Width = 312
+    Left = 248
+    Height = 250
+    Top = 128
+    Width = 250
     OnClick = OriginalImage1Click
   end
   object embedImage1: TImage
-    Left = 680
-    Height = 279
-    Top = 114
-    Width = 312
+    Left = 696
+    Height = 250
+    Top = 128
+    Width = 250
     OnClick = embedImage1Click
   end
   object embedText: TEdit
     Left = 248
     Height = 23
-    Top = 66
-    Width = 288
+    Top = 402
+    Width = 250
     OnChange = embedTextChange
     TabOrder = 2
     TextHint = 'Message to Embed'
   end
   object extractText: TEdit
-    Left = 613
+    Left = 248
     Height = 23
-    Top = 520
-    Width = 288
+    Top = 808
+    Width = 250
     OnChange = embedTextChange
     TabOrder = 3
     TextHint = 'Embedded Message'
   end
   object loadButton: TButton
-    Left = 119
+    Left = 176
     Height = 25
     Top = 24
     Width = 75
@@ -68,7 +68,7 @@ object Form1: TForm1
     TabOrder = 4
   end
   object saveButton: TButton
-    Left = 216
+    Left = 280
     Height = 25
     Top = 24
     Width = 75
@@ -77,7 +77,7 @@ object Form1: TForm1
     TabOrder = 5
   end
   object closeButton: TButton
-    Left = 304
+    Left = 384
     Height = 25
     Top = 24
     Width = 75
@@ -86,15 +86,93 @@ object Form1: TForm1
     TabOrder = 6
   end
   object embedImage2: TImage
-    Left = 240
-    Height = 272
-    Top = 424
-    Width = 312
+    Left = 248
+    Height = 250
+    Top = 528
+    Width = 250
+  end
+  object labelOriginalImage1: TLabel
+    Left = 312
+    Height = 21
+    Top = 90
+    Width = 107
+    Caption = 'Original Image'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object labelOriginalImage2: TLabel
+    Left = 768
+    Height = 21
+    Top = 90
+    Width = 101
+    Caption = 'Embed Image'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object labelOriginalImage3: TLabel
+    Left = 320
+    Height = 21
+    Top = 488
+    Width = 101
+    Caption = 'Embed Image'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object EMBEDDING: TLabel
+    Left = 24
+    Height = 45
+    Top = 232
+    Width = 178
+    Caption = 'EMBEDDING'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -32
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object EXTRACTION: TLabel
+    Left = 24
+    Height = 45
+    Top = 640
+    Width = 186
+    Caption = 'EXTRACTION'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -32
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
   end
   object radioLoadOption: TRadioGroup
-    Left = 8
+    Left = 48
     Height = 58
-    Top = 8
+    Top = 24
     Width = 102
     AutoFill = True
     AutoSize = True
@@ -115,87 +193,12 @@ object Form1: TForm1
     )
     TabOrder = 7
   end
-  object labelOriginalImage1: TLabel
-    Left = 320
-    Height = 21
-    Top = 90
-    Width = 103
-    Caption = 'Original Image'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -16
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-  end
-  object labelOriginalImage2: TLabel
-    Left = 776
-    Height = 21
-    Top = 90
-    Width = 95
-    Caption = 'Embed Image'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -16
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-  end
-  object labelOriginalImage3: TLabel
-    Left = 344
-    Height = 21
-    Top = 400
-    Width = 95
-    Caption = 'Embed Image'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -16
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-  end
-  object EMBEDDING: TLabel
-    Left = 16
-    Height = 45
-    Top = 216
-    Width = 178
-    Caption = 'EMBEDDING'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -32
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-  end
-  object EXTRACTION: TLabel
-    Left = 24
-    Height = 45
-    Top = 520
-    Width = 186
-    Caption = 'EXTRACTION'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -32
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-  end
   object openPictureDialog: TOpenPictureDialog
-    Left = 584
-    Top = 8
+    Left = 952
+    Top = 648
   end
   object savePictureDialog: TSavePictureDialog
-    Left = 472
-    Top = 8
+    Left = 840
+    Top = 648
   end
 end

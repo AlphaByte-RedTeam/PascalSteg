@@ -36,7 +36,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
-    procedure OriginalImage1Click(Sender: TObject);
   private
 
   public
@@ -51,8 +50,6 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
-
-// TODO: Fix Radio Group Button
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -69,10 +66,6 @@ begin
 
 end;
 
-procedure TForm1.OriginalImage1Click(Sender: TObject);
-begin
-
-end;
 
 procedure TForm1.embedButtonClick(Sender: TObject);
 begin
