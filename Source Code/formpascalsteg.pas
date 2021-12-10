@@ -36,15 +36,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
-<<<<<<< HEAD
-    
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
-
-type
-  TForm1 = class(TForm)
-=======
-    procedure OriginalImage1Click(Sender: TObject);
->>>>>>> parent of 67b018c (refactor: change design interface)
   private
 
   public
@@ -59,8 +50,6 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
-
-// TODO: Fix Radio Group Button
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -77,10 +66,6 @@ begin
 
 end;
 
-procedure TForm1.OriginalImage1Click(Sender: TObject);
-begin
-
-end;
 
 procedure TForm1.embedButtonClick(Sender: TObject);
 begin
@@ -91,4 +76,6 @@ procedure TForm1.embedTextChange(Sender: TObject);
 begin
 
 end;
+
 end.
+
