@@ -36,11 +36,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
-    
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
-
-type
-  TForm1 = class(TForm)
   private
 
   public
@@ -81,5 +76,5 @@ procedure TForm1.embedTextChange(Sender: TObject);
 begin
 
 end;
-end.
 
+end.
