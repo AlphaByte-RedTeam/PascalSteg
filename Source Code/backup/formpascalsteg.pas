@@ -19,7 +19,6 @@ type
     labelOriginalImage1: TLabel;
     labelOriginalImage2: TLabel;
     labelOriginalImage3: TLabel;
-    loadButton: TButton;
     radioLoadOption: TRadioGroup;
     saveButton: TButton;
     closeButton: TButton;
@@ -32,7 +31,6 @@ type
     openPictureDialog: TOpenPictureDialog;
     savePictureDialog: TSavePictureDialog;
     procedure embedTextChange(Sender: TObject);
-    procedure embedButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
@@ -66,16 +64,9 @@ begin
 
 end;
 
-
-procedure TForm1.embedButtonClick(Sender: TObject);
-begin
-
-end;
-
 procedure TForm1.embedTextChange(Sender: TObject);
 begin
 
 end;
 
 end.
-

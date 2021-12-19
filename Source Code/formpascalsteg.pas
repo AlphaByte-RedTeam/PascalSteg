@@ -13,13 +13,13 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    btnLoad: TButton;
     EXTRACTION: TLabel;
     embedImage2: TImage;
     EMBEDDING: TLabel;
     labelOriginalImage1: TLabel;
     labelOriginalImage2: TLabel;
     labelOriginalImage3: TLabel;
-    loadButton: TButton;
     radioLoadOption: TRadioGroup;
     saveButton: TButton;
     closeButton: TButton;
@@ -31,8 +31,8 @@ type
     embedImage1: TImage;
     openPictureDialog: TOpenPictureDialog;
     savePictureDialog: TSavePictureDialog;
+    procedure btnLoadClick(Sender: TObject);
     procedure embedTextChange(Sender: TObject);
-    procedure embedButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
@@ -66,13 +66,12 @@ begin
 
 end;
 
-
-procedure TForm1.embedButtonClick(Sender: TObject);
+procedure TForm1.embedTextChange(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.embedTextChange(Sender: TObject);
+procedure TForm1.btnLoadClick(Sender: TObject);
 begin
 
 end;
