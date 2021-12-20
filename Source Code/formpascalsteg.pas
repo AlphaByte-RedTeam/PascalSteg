@@ -36,6 +36,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
+    procedure saveButtonClick(Sender: TObject);
   private
 
   public
@@ -64,6 +65,14 @@ end;
 procedure TForm1.embedImage1Click(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.saveButtonClick(Sender: TObject);
+begin
+  if (savePictureDialog.Execute) then
+  begin
+    embedImage1.Picture.SaveToFile(savePictureDialog.FileName);
+  end;
 end;
 
 procedure TForm1.embedTextChange(Sender: TObject);
