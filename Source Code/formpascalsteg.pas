@@ -73,7 +73,17 @@ end;
 
 procedure TForm1.btnLoadClick(Sender: TObject);
 begin
+  if radioLoadOption.ItemIndex = 0 then
+  begin
+    if (openPictureDialog.Execute) then
+       originalImage1.Picture.LoadFromFile(openPictureDialog.FileName);
+  end
 
+  else
+  begin
+    if (openPictureDialog.Execute) then
+       embedImage2.Picture.LoadFromFile(openPictureDialog.FileName);
+  end;
 end;
 
 end.

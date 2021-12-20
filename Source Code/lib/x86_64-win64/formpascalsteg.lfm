@@ -180,6 +180,15 @@ object Form1: TForm1
     )
     TabOrder = 6
   end
+  object btnLoad: TButton
+    Left = 176
+    Height = 25
+    Top = 24
+    Width = 75
+    Caption = 'Load'
+    OnClick = btnLoadClick
+    TabOrder = 7
+  end
   object openPictureDialog: TOpenPictureDialog
     Left = 952
     Top = 648

@@ -13,6 +13,7 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    btnLoad: TButton;
     EXTRACTION: TLabel;
     embedImage2: TImage;
     EMBEDDING: TLabel;
@@ -30,6 +31,7 @@ type
     embedImage1: TImage;
     openPictureDialog: TOpenPictureDialog;
     savePictureDialog: TSavePictureDialog;
+    procedure btnLoadClick(Sender: TObject);
     procedure embedTextChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
@@ -67,6 +69,18 @@ end;
 procedure TForm1.embedTextChange(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.btnLoadClick(Sender: TObject);
+begin
+  if radioLoadOption.ItemIndex = 0 then
+  begin
+    if (openPictureDialog.Execute) then
+       originalImage1.Picture.LoadFromFile(openPictureDialog.FileName);
+
+    else
+        embedImage1.Picture.LoadFromFile(openPictureDialog.FileName);
+  end
 end;
 
 end.
