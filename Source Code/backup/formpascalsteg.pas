@@ -69,7 +69,7 @@ end;
 
 procedure TForm1.saveButtonClick(Sender: TObject);
 begin
-  if (saveDialog.Execute) then
+  if (savePictureDialog.Execute) then
   begin
     embedImage1.Picture.SaveToFile(savePictureDialog.FileName);
   end;
