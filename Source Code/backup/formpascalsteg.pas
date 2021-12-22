@@ -13,13 +13,13 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    btnLoad: TButton;
     EXTRACTION: TLabel;
     embedImage2: TImage;
     EMBEDDING: TLabel;
     labelOriginalImage1: TLabel;
     labelOriginalImage2: TLabel;
     labelOriginalImage3: TLabel;
-    loadButton: TButton;
     radioLoadOption: TRadioGroup;
     saveButton: TButton;
     closeButton: TButton;
@@ -31,11 +31,12 @@ type
     embedImage1: TImage;
     openPictureDialog: TOpenPictureDialog;
     savePictureDialog: TSavePictureDialog;
+    procedure btnLoadClick(Sender: TObject);
     procedure embedTextChange(Sender: TObject);
-    procedure embedButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
+    procedure saveButtonClick(Sender: TObject);
   private
 
   public
@@ -66,10 +67,12 @@ begin
 
 end;
 
-
-procedure TForm1.embedButtonClick(Sender: TObject);
+procedure TForm1.saveButtonClick(Sender: TObject);
 begin
-
+  if (savePictureDialog.Execute) then
+  begin
+    embedImage1.Picture.SaveToFile(savePictureDialog.FileName);
+  end;
 end;
 
 procedure TForm1.embedTextChange(Sender: TObject);
@@ -77,5 +80,19 @@ begin
 
 end;
 
-end.
+procedure TForm1.btnLoadClick(Sender: TObject);
+begin
+  if radioLoadOption.ItemIndex = 0 then
+  begin
+    if (openPictureDialog.Execute) then
+       originalImage1.Picture.LoadFromFile(openPictureDialog.FileName);
+  end
 
+  else
+  begin
+    if (openPictureDialog.Execute) then
+       embedImage2.Picture.LoadFromFile(openPictureDialog.FileName);
+  end;
+end;
+
+end.
