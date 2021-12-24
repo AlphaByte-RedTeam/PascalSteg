@@ -39,6 +39,12 @@ type
     procedure embedImage1Click(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
   private
+    {Private Declarations}
+    function BitsToBytes(const bits:AnsiString): String;
+    function ByteToBits(const data:String): AnsiString;
+    function ReverseBits(const bits:String): String;
+    function ReadFromBMP(const bmp:TBitmap; const internal:Boolean = False): String;
+    procedure EmbedToBmp(const data: String; bmp, SaveTo:TBitmap);
 
   public
 

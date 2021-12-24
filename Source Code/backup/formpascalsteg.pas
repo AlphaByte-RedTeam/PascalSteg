@@ -32,6 +32,7 @@ type
     openPictureDialog: TOpenPictureDialog;
     savePictureDialog: TSavePictureDialog;
     procedure btnLoadClick(Sender: TObject);
+    procedure closeButtonClick(Sender: TObject);
     procedure embedTextChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure originalImage1Click(Sender: TObject);
@@ -93,6 +94,11 @@ begin
     if (openPictureDialog.Execute) then
        embedImage2.Picture.LoadFromFile(openPictureDialog.FileName);
   end;
+end;
+
+procedure TForm1.closeButtonClick(Sender: TObject);
+begin
+  close
 end;
 
 end.
