@@ -47,6 +47,7 @@ type
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
+
   private
     {Private Declarations}
     function BitsToBytes(const bits:AnsiString): String;
