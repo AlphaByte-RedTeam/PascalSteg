@@ -20,6 +20,7 @@ type
 
   { TForm1 }
 
+  bits = array[1..MAX_BITS_COUNT] of byte;
   TForm1 = class(TForm)
     btnLoad: TButton;
     EXTRACTION: TLabel;
