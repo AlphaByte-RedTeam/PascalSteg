@@ -8,6 +8,13 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtDlgs, Buttons,
   StdCtrls, ExtCtrls;
 
+// Flag to mark the image
+// PascalSteg will be our flag
+const
+  FLAG_STRING_LEN = 10; // change the value according to flag char
+  FLAG_MARK = 'PascalSteg'; // change the flag here
+  MAX_FLAG_COUNT = 100; // max bytes of secret message
+
 type
 
   { TForm1 }
@@ -39,6 +46,12 @@ type
     procedure embedImage1Click(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
   private
+    {Private Declarations}
+    function BitsToBytes(const bits:AnsiString): String;
+    function ByteToBits(const data:String): AnsiString;
+    function ReverseBits(const bits:String): String;
+    function ReadFromBMP(const bmp:TBitmap; const internal:Boolean = False): String;
+    procedure EmbedToBmp(const data: String; bmp, SaveTo:TBitmap);
 
   public
 

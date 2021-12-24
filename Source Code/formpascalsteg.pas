@@ -8,6 +8,14 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtDlgs, Buttons,
   StdCtrls, ExtCtrls;
 
+// Flag to mark the image
+// PascalSteg will be our flag
+const
+  FLAG_STRING_LEN = 10; // change the value according to flag char
+  FLAG_MARK = 'PascalSteg'; // change the flag here
+  MAX_CHAR_COUNT = 100; // max bytes of secret message
+  MAX_BITS_COUNT = (MAX_CHAR_COUNT + FLAG_STRING_LEN) * 8;
+
 type
 
   { TForm1 }
