@@ -47,10 +47,11 @@ type
     procedure originalImage1Click(Sender: TObject);
     procedure embedImage1Click(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
+
   private
     {Private Declarations}
     function BitsToBytes(const bits:AnsiString): String;
-    function ByteToBits(const data:String): AnsiString;
+    function ByteToBits(const message:String): AnsiString;
     function ReverseBits(const bits:String): String;
     function ReadFromBMP(const bmp:TBitmap; const internal:Boolean = False): String;
     procedure EmbedToBmp(const data: String; bmp, SaveTo:TBitmap);
@@ -67,6 +68,40 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
+
+function TForm1.ByteToBits(const message:String): AnsiString;
+var
+  bit, b: byte;
+  x, y: integer;
+  temp: String;
+  count: integer;
+  ansi: AnsiString;
+begin
+  if message = '' then
+  begin
+    ShowMessage('Message is Empty! Please input a message');
+    Exit;
+  end;
+
+  temp := FLAG_MARK + message;
+  SetLength(ansi, MAX_BITS_COUNT);
+  for x:=1 to MAX_BITS_COUNT do
+      ansi[x] := '0';
+
+  count := 0;
+
+  for x:=1 to length(temp) do
+  begin
+    b := ord(temp[x]);
+    for y:=0 to 7 do
+    begin
+      bit := (b SHR j) AND 1;
+      ansi[count+1] := IntToStr(bit)[1];
+      inc(count);
+    end;
+  end;
+  Result := ansi;
+end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
