@@ -95,7 +95,7 @@ begin
     b := ord(temp[x]);
     for y:=0 to 7 do
     begin
-      bit := (b SHR j) AND 1;
+      bit := (b SHR y) AND 1;
       ansi[count+1] := IntToStr(bit)[1];
       inc(count);
     end;
