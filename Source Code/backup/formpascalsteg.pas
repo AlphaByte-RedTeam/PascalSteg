@@ -104,12 +104,17 @@ begin
 end;
 
 function TForm1.ReverseBits(const bits: String): String;
+var
+  x: integer;
 begin
-
+  if length(bits) <> 8 then
+     exit;
+  Result := bits;
+  for x:=1 to 8 do
+      Result[8 - (x-1)] := bits[x];
 end;
 
-function TForm1.ReadFromBMP(const bmp: TBitmap; const internal: Boolean
-  ): String;
+function TForm1.ReadFromBMP(const bmp: TBitmap; const internal: Boolean): String;
 begin
 
 end;
