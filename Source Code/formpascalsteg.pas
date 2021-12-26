@@ -53,7 +53,7 @@ type
     function BitsToBytes(const bits:AnsiString): String;
     function ByteToBits(const message:String): AnsiString;
     function ReverseBits(const bits:String): String;
-    function ReadFromBMP(const bmp:TBitmap; const internal:Boolean = False): String;
+    function ReadFromBMP(const bmp: TBitmap; const internal: Boolean): String;
     procedure EmbedToBmp(const data: String; bmp, SaveTo:TBitmap);
 
   public
@@ -151,8 +151,42 @@ begin
 end;
 
 function TForm1.BitsToBytes(const bits: AnsiString): String;
+var
+  temp: String;
+  x: integer;
+  bit, b: byte;
+  str8: String;
 begin
+  temp := bits;
+  Result := '';
 
+  // as long as temp is greater than 0
+  while length(temp) > 0 do
+  begin
+    str8 := copy(temp, 1, 8); // copy temp to str8
+    delete(temp, 1, 8); // free temp
+    str8 := ReverseBits(str8); // Reverse bit order from str8
+    b := 0; // b start from 0
+
+    // x :-> from 1 to 8 do
+    for x:=1 to 8 do
+    begin
+      // if str8 index x is 1, then bit is 1
+      if str8[x] = '1' then
+      begin
+         bit := 1;
+      end
+      // else, bit is 0
+      else
+          bit := 0;
+
+      // shift left b 1 time, then OR the result with bit
+      // store the result in b
+      b := (b SHL 1) OR bit;
+    end;
+    // append b to result
+    Result := Result + chr(b);
+  end;
 end;
 
 procedure TForm1.embedTextChange(Sender: TObject);
