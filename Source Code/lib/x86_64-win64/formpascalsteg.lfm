@@ -4,8 +4,8 @@ object Form1: TForm1
   Top = 106
   Width = 1074
   Caption = 'PascalSteg'
-  ClientHeight = 865
-  ClientWidth = 1074
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '2.0.12.0'
   object embedButton: TButton

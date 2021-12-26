@@ -118,8 +118,44 @@ begin
 end;
 
 function TForm1.ReadFromBMP(const bmp: TBitmap; const internal: Boolean): String;
+var
+  bs: AnsiString;
+  pix: byte;
+  x, y: integer;
+  count: Word;
+  flag: String;
 begin
+  SetLength(bs, MAX_BITS_COUNT);
+  bmp.Canvas.Lock;
+  count := 1;
+  for y:=0 to bmp.Height-1 do
+  begin
+    if count > MAX_BITS_COUNT then
+       break;
 
+    for x:=0 to bmp.Width-1 do
+    begin
+      if count > MAX_BITS_COUNT then
+         break;
+      pix := bmp.Canvas.Pixels[x,y];
+      pix := pix AND $00000001;
+      bs[count] := IntToStr(pix)[1];
+      inc(count);
+    end;
+  end;
+
+  bmp.Canvas.Unlock;
+  Result := BitsToBytes(bs);
+  if internal then
+     exit;
+  flag := copy(Result, 1, length(FLAG_MARK));
+
+  if flag = FLAG_MARK then
+     delete(Result, 1, length(FLAG_MARK))
+  else
+    begin
+      Result := '[WARNING] ' + #13#10 + 'Bitmap is invalid or Secret Data is Missing.';
+    end
 end;
 
 procedure TForm1.EmbedToBmp(const data: String; bmp, SaveTo: TBitmap);
