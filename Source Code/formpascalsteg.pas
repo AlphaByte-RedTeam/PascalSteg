@@ -108,8 +108,7 @@ begin
 
 end;
 
-function TForm1.ReadFromBMP(const bmp: TBitmap; const internal: Boolean
-  ): String;
+function TForm1.ReadFromBMP(const bmp: TBitmap; const internal: Boolean): String;
 begin
 
 end;

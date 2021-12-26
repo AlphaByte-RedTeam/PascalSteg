@@ -103,6 +103,22 @@ begin
   Result := ansi;
 end;
 
+function TForm1.ReverseBits(const bits: String): String;
+begin
+
+end;
+
+function TForm1.ReadFromBMP(const bmp: TBitmap; const internal: Boolean
+  ): String;
+begin
+
+end;
+
+procedure TForm1.EmbedToBmp(const data: String; bmp, SaveTo: TBitmap);
+begin
+
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
 
@@ -124,6 +140,11 @@ begin
   begin
     embedImage1.Picture.SaveToFile(savePictureDialog.FileName);
   end;
+end;
+
+function TForm1.BitsToBytes(const bits: AnsiString): String;
+begin
+
 end;
 
 procedure TForm1.embedTextChange(Sender: TObject);
