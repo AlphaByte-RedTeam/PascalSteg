@@ -13,6 +13,7 @@ object Form1: TForm1
     Top = 400
     Width = 67
     Caption = 'Embed'
+    OnClick = embedButtonClick
     TabOrder = 0
   end
   object extractButton: TButton
@@ -40,7 +41,6 @@ object Form1: TForm1
     Height = 23
     Top = 402
     Width = 250
-    OnChange = embedTextChange
     TabOrder = 2
     TextHint = 'Message to Embed'
   end
@@ -49,7 +49,6 @@ object Form1: TForm1
     Height = 23
     Top = 808
     Width = 250
-    OnChange = embedTextChange
     TabOrder = 3
     TextHint = 'Embedded Message'
   end

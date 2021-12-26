@@ -42,10 +42,8 @@ type
     savePictureDialog: TSavePictureDialog;
     procedure btnLoadClick(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
+    procedure embedButtonClick(Sender: TObject);
     procedure embedTextChange(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure originalImage1Click(Sender: TObject);
-    procedure embedImage1Click(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
   private
@@ -264,6 +262,10 @@ end;
 procedure TForm1.closeButtonClick(Sender: TObject);
 begin
   close
+end;
+
+procedure TForm1.embedButtonClick(Sender: TObject);
+begin
 end;
 
 end.

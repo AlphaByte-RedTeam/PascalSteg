@@ -42,7 +42,7 @@ type
     savePictureDialog: TSavePictureDialog;
     procedure btnLoadClick(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
-    procedure embedTextChange(Sender: TObject);
+    procedure embedButtonClick(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
   private
@@ -238,11 +238,6 @@ begin
   end;
 end;
 
-procedure TForm1.embedTextChange(Sender: TObject);
-begin
-
-end;
-
 procedure TForm1.btnLoadClick(Sender: TObject);
 begin
   if radioLoadOption.ItemIndex = 0 then
@@ -261,6 +256,10 @@ end;
 procedure TForm1.closeButtonClick(Sender: TObject);
 begin
   close
+end;
+
+procedure TForm1.embedButtonClick(Sender: TObject);
+begin
 end;
 
 end.
