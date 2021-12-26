@@ -43,9 +43,6 @@ type
     procedure btnLoadClick(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
     procedure embedTextChange(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure originalImage1Click(Sender: TObject);
-    procedure embedImage1Click(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
   private
@@ -159,23 +156,39 @@ begin
 end;
 
 procedure TForm1.EmbedToBmp(const data: String; bmp, SaveTo: TBitmap);
+var
+  bs: AnsiString;
+  pix: TColor;
+  x, y: integer;
+  count: Word;
+  bitmap: TBitmap;
 begin
+  bs := ByteToBits(data);
+  SaveTo.Assign(bitmap);
 
-end;
+  SaveTo.Canvas.Lock;
+  count := 1;
 
-procedure TForm1.FormCreate(Sender: TObject);
-begin
+  for y:=0 to SaveTo.Height-1 do
+  begin
+    if count > MAX_BITS_COUNT then
+       break;
+    for x:=0 to SaveTo.Width-1 do
+    begin
+      pix := SaveTo.Canvas.Pixels[x,y];
 
-end;
+      if count > MAX_BITS_COUNT then
+         break;
 
-procedure TForm1.originalImage1Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.embedImage1Click(Sender: TObject);
-begin
-
+      if bs[count] = '1' then
+         pix := pix OR $0000001
+      else
+          pix := pix AND $FFFFFFFE;
+      inc(count);
+      SaveTo.Canvas.Pixels[x,y] := pix;
+    end;
+  end;
+  SaveTo.Canvas.Unlock;
 end;
 
 procedure TForm1.saveButtonClick(Sender: TObject);
