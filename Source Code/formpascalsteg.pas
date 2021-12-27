@@ -43,6 +43,7 @@ type
     procedure btnLoadClick(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
     procedure embedButtonClick(Sender: TObject);
+    procedure extractButtonClick(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
   private
@@ -259,8 +260,17 @@ begin
 end;
 
 procedure TForm1.embedButtonClick(Sender: TObject);
+var
+  bmp: TBitmap;
 begin
+  bmp := TBitmap.Create;
+  EmbedToBmp(embedText.Text, originalImage1.Picture.Bitmap, bmp);
+  bmp.free;
+end;
 
+procedure TForm1.extractButtonClick(Sender: TObject);
+begin
+  extractText.Text = ReadFromBmp(embedImage2.Picture.Bitmap);
 end;
 
 end.

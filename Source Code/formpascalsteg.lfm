@@ -4,8 +4,8 @@ object Form1: TForm1
   Top = 106
   Width = 1074
   Caption = 'PascalSteg'
-  ClientHeight = 865
-  ClientWidth = 1074
+  ClientHeight = 0
+  ClientWidth = 0
   LCLVersion = '2.0.12.0'
   object embedButton: TButton
     Left = 528
@@ -22,6 +22,7 @@ object Form1: TForm1
     Top = 806
     Width = 75
     Caption = 'Extract'
+    OnClick = extractButtonClick
     TabOrder = 1
   end
   object originalImage1: TImage
