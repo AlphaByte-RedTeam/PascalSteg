@@ -51,7 +51,7 @@ type
     function ByteToBits(const message:String): AnsiString;
     function ReverseBits(const bits:String): String;
     function ReadFromBMP(const bmp: TBitmap; const internal: Boolean): String;
-    procedure EmbedToBmp(const data: String; bmp, SaveTo:TBitmap);
+    procedure EmbedToBmp(const message: String; bmp, SaveTo:TBitmap);
 
   public
 
@@ -155,7 +155,7 @@ begin
     end
 end;
 
-procedure TForm1.EmbedToBmp(const data: String; bmp, SaveTo: TBitmap);
+procedure TForm1.EmbedToBmp(const message: String; bmp, SaveTo: TBitmap);
 var
   bs: AnsiString;
   pix: TColor;
@@ -163,7 +163,7 @@ var
   count: Word;
   bitmap: TBitmap;
 begin
-  bs := ByteToBits(data);
+  bs := ByteToBits(message);
   SaveTo.Assign(bitmap);
 
   SaveTo.Canvas.Lock;
@@ -260,6 +260,7 @@ end;
 
 procedure TForm1.embedButtonClick(Sender: TObject);
 begin
+
 end;
 
 end.

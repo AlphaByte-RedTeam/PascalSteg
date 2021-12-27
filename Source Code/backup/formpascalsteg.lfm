@@ -4,8 +4,8 @@ object Form1: TForm1
   Top = 106
   Width = 1074
   Caption = 'PascalSteg'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 865
+  ClientWidth = 1074
   LCLVersion = '2.0.12.0'
   object embedButton: TButton
     Left = 528
@@ -41,7 +41,6 @@ object Form1: TForm1
     Height = 23
     Top = 402
     Width = 250
-    OnChange = embedTextChange
     TabOrder = 2
     TextHint = 'Message to Embed'
   end
@@ -50,7 +49,6 @@ object Form1: TForm1
     Height = 23
     Top = 808
     Width = 250
-    OnChange = embedTextChange
     TabOrder = 3
     TextHint = 'Embedded Message'
   end
