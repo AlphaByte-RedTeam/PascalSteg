@@ -13,7 +13,7 @@ uses
 const
   FLAG_STRING_LEN = 10; // change the value according to flag char
   FLAG_MARK = 'PascalSteg'; // change the flag here
-  MAX_CHAR_COUNT = 100; // max bytes of secret message
+  MAX_CHAR_COUNT = 400; // max bytes of secret message
   MAX_BITS_COUNT = (MAX_CHAR_COUNT + FLAG_STRING_LEN) * 8;
 
 type
@@ -52,7 +52,7 @@ type
     function ByteToBits(const message:String): AnsiString;
     function ReverseBits(const bits:String): String;
     function ReadFromBMP(const bmp: TBitmap; const internal: Boolean = false): String;
-    procedure EmbedToBmp(const message: String; bmp, SaveTo:TBitmap);
+    procedure EmbedToBmp(const message: String; originalImage, embedImage:TImage);
 
   public
 
@@ -75,12 +75,7 @@ var
   count: integer;
   ansi: AnsiString;
 begin
-  if message = '' then
-  begin
-    ShowMessage('Message is Empty! Please input a message');
-    Exit;
-  end;
-
+  ansi := '';
   temp := FLAG_MARK + message;
   SetLength(ansi, MAX_BITS_COUNT);
   for x:=1 to MAX_BITS_COUNT do
@@ -123,6 +118,7 @@ var
   count: Word;
   flag: String;
 begin
+  bs := '';
   SetLength(bs, MAX_BITS_COUNT);
   bmp.Canvas.Lock;
   count := 1;
@@ -156,41 +152,39 @@ begin
     end
 end;
 
-procedure TForm1.EmbedToBmp(const message: String; bmp, SaveTo: TBitmap);
+procedure TForm1.EmbedToBmp(const message: String; originalImage: TImage; embedImage: TImage);
 var
   bs: AnsiString;
   pix: TColor;
   x, y: integer;
   count: Word;
-  bitmap: TBitmap;
 begin
-  bs := ByteToBits(message);
-  // SaveTo.Assign(bitmap);
-  SaveTo := bmp; // I change this
+  if message = '' then
+    ShowMessage('Message is Empty! Please input a message')
+  else
+    bs := ByteToBits(message);
 
-  SaveTo.Canvas.Lock;
   count := 1;
 
-  for y:=0 to SaveTo.Height-1 do
+  for y:=0 to originalImage.Height-1 do
   begin
-    if count > MAX_BITS_COUNT then
-       break;
-    for x:=0 to SaveTo.Width-1 do
+    for x:=0 to originalImage.Width-1 do
     begin
-      pix := SaveTo.Canvas.Pixels[x,y];
+      pix := originalImage.Canvas.Pixels[x,y];
 
-      if count > MAX_BITS_COUNT then
-         break;
+      // Determine the current pixel's operation and append to embedImage1.
+      if count < MAX_BITS_COUNT then
+      begin
+        if bs[count] = '1' then
+           pix := 255
+        else
+            pix := 255;
+      end;
+      embedImage.Canvas.Pixels[x,y] := 255;
 
-      if bs[count] = '1' then
-         pix := pix OR $0000001
-      else
-          pix := pix AND $FFFFFFFE;
-      inc(count);
-      SaveTo.Canvas.Pixels[x,y] := pix;
+      count := count + 1;
     end;
   end;
-  SaveTo.Canvas.Unlock;
 end;
 
 procedure TForm1.saveButtonClick(Sender: TObject);
@@ -301,12 +295,8 @@ begin
 end;
 
 procedure TForm1.embedButtonClick(Sender: TObject);
-var
-  bmp: TBitmap;
 begin
-  bmp := TBitmap.Create;
-  EmbedToBmp(embedText.Text, originalImage1.Picture.Bitmap, bmp);
-  bmp.free;
+  EmbedToBmp(embedText.Text, originalImage1, embedImage1);
 end;
 
 procedure TForm1.extractButtonClick(Sender: TObject);
