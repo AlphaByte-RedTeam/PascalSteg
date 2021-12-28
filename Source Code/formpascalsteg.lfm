@@ -19,7 +19,7 @@ object Form1: TForm1
   object extractButton: TButton
     Left = 528
     Height = 25
-    Top = 806
+    Top = 808
     Width = 75
     Caption = 'Extract'
     TabOrder = 1

@@ -43,7 +43,7 @@ type
     procedure btnLoadClick(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
     procedure embedButtonClick(Sender: TObject);
-    procedure extractButtonClick(Sender: TObject);
+    // procedure extractButtonClick(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
   private
@@ -165,7 +165,8 @@ var
   bitmap: TBitmap;
 begin
   bs := ByteToBits(message);
-  SaveTo.Assign(bitmap);
+  // SaveTo.Assign(bitmap);
+  SaveTo := bmp; // I change this
 
   SaveTo.Canvas.Lock;
   count := 1;
