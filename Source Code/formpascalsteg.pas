@@ -43,7 +43,7 @@ type
     procedure btnLoadClick(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
     procedure embedButtonClick(Sender: TObject);
-    procedure extractButtonClick(Sender: TObject);
+    // procedure extractButtonClick(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
   private
@@ -240,16 +240,56 @@ begin
 end;
 
 procedure TForm1.btnLoadClick(Sender: TObject);
+var
+  ok: boolean;
 begin
   if radioLoadOption.ItemIndex = 0 then
   begin
     if (openPictureDialog.Execute) then
+    begin
+       // originalImage1.Picture.LoadFromFile(openPictureDialog.FileName);
+       with TBitmap.Create do
+       begin
+         try
+           LoadFromFile(openPictureDialog.FileName);
+           if (width * height) <= MAX_BITS_COUNT then
+           begin
+             ShowMessage('Minimum dimension of image is 100x100');
+             Exit;
+           end;
+           ok := true;
+         except
+           Free;
+         end;
+       end;
+    end;
+
+    if ok then
        originalImage1.Picture.LoadFromFile(openPictureDialog.FileName);
   end
 
   else
   begin
     if (openPictureDialog.Execute) then
+    begin
+       // embedImage2.Picture.LoadFromFile(openPictureDialog.FileName);
+       with TBitmap.Create do
+       begin
+         try
+           LoadFromFile(openPictureDialog.FileName);
+           if (width * height) <= MAX_BITS_COUNT then
+           begin
+             ShowMessage('Minimum dimension of image is 100x100');
+             Exit;
+           end;
+           ok := true;
+         except
+           Free;
+         end;
+       end;
+    end;
+
+    if ok then
        embedImage2.Picture.LoadFromFile(openPictureDialog.FileName);
   end;
 end;
@@ -268,9 +308,9 @@ begin
   bmp.free;
 end;
 
-procedure TForm1.extractButtonClick(Sender: TObject);
+{procedure TForm1.extractButtonClick(Sender: TObject);
 begin
   extractText.Text = ReadFromBmp(embedImage2.Picture.Bitmap);
-end;
+end;}
 
 end.
