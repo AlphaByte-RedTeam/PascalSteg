@@ -43,7 +43,7 @@ type
     procedure btnLoadClick(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
     procedure embedButtonClick(Sender: TObject);
-    // procedure extractButtonClick(Sender: TObject);
+    procedure extractButtonClick(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
   private
@@ -51,7 +51,7 @@ type
     function BitsToBytes(const bits:AnsiString): String;
     function ByteToBits(const message:String): AnsiString;
     function ReverseBits(const bits:String): String;
-    function ReadFromBMP(const bmp: TBitmap; const internal: Boolean): String;
+    function ReadFromBMP(const bmp: TBitmap; const internal: Boolean = false): String;
     procedure EmbedToBmp(const message: String; bmp, SaveTo:TBitmap);
 
   public
@@ -115,7 +115,7 @@ begin
       Result[8 - (x-1)] := bits[x];
 end;
 
-function TForm1.ReadFromBMP(const bmp: TBitmap; const internal: Boolean): String;
+function TForm1.ReadFromBMP(const bmp: TBitmap; const internal: Boolean = false): String;
 var
   bs: AnsiString;
   pix: byte;
@@ -197,7 +197,7 @@ procedure TForm1.saveButtonClick(Sender: TObject);
 begin
   if (savePictureDialog.Execute) then
   begin
-    embedImage1.Picture.SaveToFile(savePictureDialog.FileName);
+    originalImage1.Picture.SaveToFile(savePictureDialog.FileName);
   end;
 end;
 
@@ -309,9 +309,12 @@ begin
   bmp.free;
 end;
 
-{procedure TForm1.extractButtonClick(Sender: TObject);
+procedure TForm1.extractButtonClick(Sender: TObject);
+var
+  msg: String;
 begin
-  extractText.Text = ReadFromBmp(embedImage2.Picture.Bitmap);
-end;}
+  msg := extractText.Text;
+  msg := ReadFromBmp(embedImage2.Picture.Bitmap);
+end;
 
 end.
