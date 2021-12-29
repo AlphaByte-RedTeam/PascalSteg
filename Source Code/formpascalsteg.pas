@@ -300,7 +300,7 @@ end;
 
 procedure TForm1.embedButtonClick(Sender: TObject);
 begin
-  if FLAG_MARK = copy(ReadFromBmp(originalImage1.Picture.Bitmap, true), 1, length(FLAG_MARK)) then
+  if FLAG_MARK = copy(ReadFromBmp(embedImage1.Picture.Bitmap, true), 1, length(FLAG_MARK)) then
   begin
     ShowMessage('Image has a secret text');
     exit;

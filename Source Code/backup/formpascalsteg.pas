@@ -159,9 +159,8 @@ var
   x, y: integer;
   count: Word;
 begin
-  embedImage1.Picture := nil;
-  embedImage1.Height  := originalImage1.Height;
-  embedImage1.Width   := originalImage1.Width;
+  // embedImage1.Picture := nil;
+
 
   if message = '' then
     ShowMessage('Message is Empty! Please input a message')
@@ -189,6 +188,8 @@ begin
       count := count + 1;
     end;
   end;
+  embedImage1.Height  := originalImage1.Height;
+  embedImage1.Width   := originalImage1.Width;
 end;
 
 procedure TForm1.saveButtonClick(Sender: TObject);
@@ -300,6 +301,11 @@ end;
 
 procedure TForm1.embedButtonClick(Sender: TObject);
 begin
+  if FLAG_MARK = copy(ReadFromBmp(originalImage1.Picture.Bitmap, true), 1, length(FLAG_MARK)) then
+  begin
+    ShowMessage('Image has a secret text');
+    exit;
+  end;
   EmbedToBmp(embedText.Text, originalImage1, embedImage1);
 end;
 

@@ -1,11 +1,11 @@
 object Form1: TForm1
   Left = 576
-  Height = 749
+  Height = 857
   Top = 74
   Width = 1074
   Caption = 'PascalSteg'
-  ClientHeight = 749
-  ClientWidth = 1074
+  ClientHeight = 0
+  ClientWidth = 0
   LCLVersion = '2.0.12.0'
   object embedButton: TButton
     Left = 528
