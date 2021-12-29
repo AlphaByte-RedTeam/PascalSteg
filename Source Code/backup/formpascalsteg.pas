@@ -176,9 +176,9 @@ begin
       if count < MAX_BITS_COUNT then
       begin
         if bs[count] = '1' then
-           pix := pix OR $0000001
+           pix := 255
         else
-            pix := pix AND $FFFFFFFE;
+            pix := 255;
       end;
       embedImage.Canvas.Pixels[x,y] := 255;
 
@@ -304,7 +304,7 @@ var
   msg: String;
 begin
   msg := extractText.Text;
-  msg := ReadFromBmp(embedImage2.Picture.Bitmap);
+  extractText.Text := ReadFromBmp(embedImage2.Picture.Bitmap);
 end;
 
 end.

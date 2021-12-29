@@ -22,8 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormPascalSteg"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="168"/>
-        <CursorPos X="37" Y="176"/>
+        <TopLine Value="173"/>
+        <CursorPos X="23" Y="181"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -68,7 +68,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="37"/>
         <CursorPos X="23" Y="40"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit7>
     </Units>

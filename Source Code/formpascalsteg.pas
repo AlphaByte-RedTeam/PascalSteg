@@ -300,11 +300,8 @@ begin
 end;
 
 procedure TForm1.extractButtonClick(Sender: TObject);
-var
-  msg: String;
 begin
-  msg := extractText.Text;
-  msg := ReadFromBmp(embedImage2.Picture.Bitmap);
+  extractText.Text := ReadFromBmp(embedImage2.Picture.Bitmap);
 end;
 
 end.
