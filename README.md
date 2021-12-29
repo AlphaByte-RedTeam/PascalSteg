@@ -34,4 +34,4 @@ Member:
 For best recommendation, please use an image with minimum resolution 250x250 </br>
 Feel free to contribute to our project :D </br>
 
-![tutorial](./video/tutorial.gif)
+![tutorial](./tutorial.gif)
