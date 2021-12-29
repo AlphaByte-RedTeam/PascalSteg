@@ -148,7 +148,7 @@ begin
      delete(Result, 1, length(FLAG_MARK))
   else
     begin
-      Result := '[WARNING] ' + #13#10 + 'Bitmap is invalid or Secret Data is Missing.';
+      ShowMessage('Bitmap is invalid or Secret Data is Missing');
     end
 end;
 
