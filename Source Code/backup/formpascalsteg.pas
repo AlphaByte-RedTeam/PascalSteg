@@ -23,6 +23,7 @@ type
   bits = array[1..MAX_BITS_COUNT] of byte;
   TForm1 = class(TForm)
     btnLoad: TButton;
+    Button1: TButton;
     EXTRACTION: TLabel;
     embedImage2: TImage;
     EMBEDDING: TLabel;
@@ -41,9 +42,10 @@ type
     openPictureDialog: TOpenPictureDialog;
     savePictureDialog: TSavePictureDialog;
     procedure btnLoadClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
     procedure embedButtonClick(Sender: TObject);
-    procedure extractButtonClick(Sender: TObject);
+    // procedure extractButtonClick(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
   private
@@ -195,7 +197,7 @@ procedure TForm1.saveButtonClick(Sender: TObject);
 begin
   if (savePictureDialog.Execute) then
   begin
-    originalImage1.Picture.SaveToFile(savePictureDialog.FileName);
+    embedImage1.Picture.SaveToFile(savePictureDialog.FileName);
   end;
 end;
 
@@ -293,6 +295,11 @@ begin
   end;
 end;
 
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  extractText.Text := ReadFromBmp(embedImage2.Picture.Bitmap);
+end;
+
 procedure TForm1.closeButtonClick(Sender: TObject);
 begin
   close
@@ -308,9 +315,9 @@ begin
   EmbedToBmp(embedText.Text, originalImage1, embedImage1);
 end;
 
-procedure TForm1.extractButtonClick(Sender: TObject);
+{procedure TForm1.extractButtonClick(Sender: TObject);
 begin
   extractText.Text := ReadFromBmp(embedImage2.Picture.Bitmap);
-end;
+end;}
 
 end.

@@ -22,9 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormPascalSteg"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="147"/>
-        <CursorPos X="6" Y="162"/>
-        <ComponentState Value="1"/>
+        <TopLine Value="285"/>
+        <CursorPos X="63" Y="300"/>
         <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -76,123 +75,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="159" Column="66" TopLine="148"/>
+        <Caret Line="159" Column="74" TopLine="150"/>
       </Position1>
       <Position2>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="185" Column="17" TopLine="170"/>
+        <Caret Line="297" Column="52" TopLine="290"/>
       </Position2>
       <Position3>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="300" Column="44" TopLine="293"/>
+        <Caret Line="85" Column="17" TopLine="77"/>
       </Position3>
       <Position4>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="159" Column="74" TopLine="150"/>
+        <Caret Line="181" Column="4" TopLine="171"/>
       </Position4>
       <Position5>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="297" Column="52" TopLine="290"/>
+        <Caret Line="304" Column="3" TopLine="292"/>
       </Position5>
       <Position6>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="85" Column="17" TopLine="77"/>
+        <Caret Line="85" Column="17" TopLine="76"/>
       </Position6>
       <Position7>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="181" Column="4" TopLine="171"/>
+        <Caret Line="126" Column="15" TopLine="117"/>
       </Position7>
       <Position8>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="304" Column="3" TopLine="292"/>
+        <Caret Line="85" Column="17" TopLine="76"/>
       </Position8>
       <Position9>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="85" Column="17" TopLine="76"/>
+        <Caret Line="83" Column="13" TopLine="73"/>
       </Position9>
       <Position10>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="126" Column="15" TopLine="117"/>
+        <Caret Line="304" Column="3" TopLine="292"/>
       </Position10>
       <Position11>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="85" Column="17" TopLine="76"/>
+        <Caret Line="126" Column="12" TopLine="117"/>
       </Position11>
       <Position12>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="83" Column="13" TopLine="73"/>
+        <Caret Line="166" Column="9" TopLine="154"/>
       </Position12>
       <Position13>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="304" Column="3" TopLine="292"/>
+        <Caret Line="164" Column="9" TopLine="157"/>
       </Position13>
       <Position14>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="126" Column="12" TopLine="117"/>
+        <Caret Line="163" Column="61" TopLine="154"/>
       </Position14>
       <Position15>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="166" Column="9" TopLine="154"/>
+        <Caret Line="164" Column="10" TopLine="157"/>
       </Position15>
       <Position16>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="164" Column="9" TopLine="157"/>
+        <Caret Line="165" Column="4" TopLine="155"/>
       </Position16>
       <Position17>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="163" Column="61" TopLine="154"/>
+        <Caret Line="163" Column="61" TopLine="157"/>
       </Position17>
       <Position18>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="164" Column="10" TopLine="157"/>
+        <Caret Line="186" Column="43" TopLine="177"/>
       </Position18>
       <Position19>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="165" Column="4" TopLine="155"/>
+        <Caret Line="187" Column="50" TopLine="174"/>
       </Position19>
       <Position20>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="163" Column="61" TopLine="157"/>
+        <Caret Line="186" Column="44" TopLine="177"/>
       </Position20>
       <Position21>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="186" Column="43" TopLine="177"/>
+        <Caret Line="186" Column="43" TopLine="172"/>
       </Position21>
       <Position22>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="187" Column="50" TopLine="174"/>
+        <Caret Line="183" Column="41" TopLine="172"/>
       </Position22>
       <Position23>
-        <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="186" Column="44" TopLine="177"/>
+        <Filename Value="PascalSteg.lpr"/>
+        <Caret Line="21" TopLine="4"/>
       </Position23>
       <Position24>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="186" Column="43" TopLine="172"/>
+        <Caret Line="183" Column="41" TopLine="172"/>
       </Position24>
       <Position25>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="183" Column="41" TopLine="172"/>
+        <Caret Line="181" Column="39" TopLine="172"/>
       </Position25>
       <Position26>
-        <Filename Value="PascalSteg.lpr"/>
-        <Caret Line="21" TopLine="4"/>
+        <Filename Value="formpascalsteg.pas"/>
+        <Caret Line="164" Column="23" TopLine="152"/>
       </Position26>
       <Position27>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="183" Column="41" TopLine="172"/>
+        <Caret Line="306" Column="5" TopLine="279"/>
       </Position27>
       <Position28>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="181" Column="39" TopLine="172"/>
+        <Caret Line="46" Column="8" TopLine="37"/>
       </Position28>
       <Position29>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="164" Column="23" TopLine="152"/>
+        <Caret Line="48" Column="8" TopLine="38"/>
       </Position29>
       <Position30>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="306" Column="5" TopLine="279"/>
+        <Caret Line="306" Column="63" TopLine="291"/>
       </Position30>
     </JumpHistory>
     <RunParams>

@@ -4,8 +4,8 @@ object Form1: TForm1
   Top = 74
   Width = 1074
   Caption = 'PascalSteg'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 857
+  ClientWidth = 1074
   LCLVersion = '2.0.12.0'
   object embedButton: TButton
     Left = 528
@@ -187,6 +187,15 @@ object Form1: TForm1
     Caption = 'Load'
     OnClick = btnLoadClick
     TabOrder = 7
+  end
+  object Button1: TButton
+    Left = 620
+    Height = 25
+    Top = 622
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 8
   end
   object openPictureDialog: TOpenPictureDialog
     Left = 952
