@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 839
+  Left = 576
   Height = 749
-  Top = 57
+  Top = 74
   Width = 1074
   Caption = 'PascalSteg'
   ClientHeight = 749
@@ -29,6 +29,7 @@ object Form1: TForm1
     Height = 250
     Top = 128
     Width = 250
+    AutoSize = True
   end
   object embedImage1: TImage
     Left = 696

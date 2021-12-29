@@ -159,6 +159,10 @@ var
   x, y: integer;
   count: Word;
 begin
+  embedImage1.Picture := nil;
+  embedImage1.Height  := originalImage1.Height;
+  embedImage1.Width   := originalImage1.Width;
+
   if message = '' then
     ShowMessage('Message is Empty! Please input a message')
   else

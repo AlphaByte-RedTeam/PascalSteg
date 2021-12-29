@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
     <Units Count="8">
       <Unit0>
@@ -22,8 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormPascalSteg"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="162"/>
-        <CursorPos X="13" Y="194"/>
+        <TopLine Value="160"/>
+        <CursorPos X="48" Y="164"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -72,7 +72,7 @@
         <Loaded Value="True"/>
       </Unit7>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="formpascalsteg.pas"/>
         <Caret Line="185" Column="18" TopLine="164"/>
@@ -189,10 +189,14 @@
         <Filename Value="formpascalsteg.pas"/>
         <Caret Line="181" Column="39" TopLine="172"/>
       </Position29>
+      <Position30>
+        <Filename Value="formpascalsteg.pas"/>
+        <Caret Line="164" Column="23" TopLine="152"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes Count="0" ActiveMode=""/>
+      <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
 </CONFIG>

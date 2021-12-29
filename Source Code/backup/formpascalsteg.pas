@@ -159,6 +159,10 @@ var
   x, y: integer;
   count: Word;
 begin
+  {embedImage1.Picture := nil;
+  embedImage1.Height  := originalImage1.Height;
+  embedImage1.Width   := originalImage1.Width;}
+
   if message = '' then
     ShowMessage('Message is Empty! Please input a message')
   else
@@ -176,11 +180,11 @@ begin
       if count < MAX_BITS_COUNT then
       begin
         if bs[count] = '1' then
-           pix := 255
+           pix := pix OR $00000001
         else
-            pix := 255;
+            pix := pix AND $FFFFFFFE;
       end;
-      embedImage.Canvas.Pixels[x,y] := 255;
+      embedImage.Canvas.Pixels[x,y] := pix;
 
       count := count + 1;
     end;
