@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
     <Units Count="8">
       <Unit0>
@@ -22,8 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormPascalSteg"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="162"/>
-        <CursorPos X="13" Y="194"/>
+        <TopLine Value="146"/>
+        <CursorPos X="43" Y="183"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -192,7 +192,7 @@
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes Count="0" ActiveMode=""/>
+      <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
 </CONFIG>

@@ -1,12 +1,12 @@
 object Form1: TForm1
-  Left = 304
+  Left = 839
   Height = 749
-  Top = 54
+  Top = 57
   Width = 1074
   Caption = 'PascalSteg'
   ClientHeight = 749
   ClientWidth = 1074
-  LCLVersion = '2.0.12.0'
+  LCLVersion = '2.2.0.1'
   object embedButton: TButton
     Left = 528
     Height = 25
@@ -89,7 +89,6 @@ object Form1: TForm1
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object labelOriginalImage2: TLabel
@@ -105,7 +104,6 @@ object Form1: TForm1
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object labelOriginalImage3: TLabel
@@ -121,7 +119,6 @@ object Form1: TForm1
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object EMBEDDING: TLabel
@@ -136,7 +133,6 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
-    ParentColor = False
     ParentFont = False
   end
   object EXTRACTION: TLabel
@@ -151,7 +147,6 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
-    ParentColor = False
     ParentFont = False
   end
   object radioLoadOption: TRadioGroup

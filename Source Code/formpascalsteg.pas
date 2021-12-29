@@ -176,11 +176,11 @@ begin
       if count < MAX_BITS_COUNT then
       begin
         if bs[count] = '1' then
-           pix := 255
+           pix := pix OR $00000001
         else
-            pix := 255;
+            pix := pix AND $FFFFFFFE;
       end;
-      embedImage.Canvas.Pixels[x,y] := 255;
+      embedImage.Canvas.Pixels[x,y] := pix;
 
       count := count + 1;
     end;

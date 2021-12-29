@@ -22,8 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FormPascalSteg"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="173"/>
-        <CursorPos X="23" Y="181"/>
+        <TopLine Value="162"/>
+        <CursorPos X="13" Y="194"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -72,7 +72,7 @@
         <Loaded Value="True"/>
       </Unit7>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="formpascalsteg.pas"/>
         <Caret Line="185" Column="18" TopLine="164"/>
@@ -171,28 +171,24 @@
       </Position24>
       <Position25>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="16" Column="25" TopLine="115"/>
+        <Caret Line="186" Column="43" TopLine="172"/>
       </Position25>
       <Position26>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="186" Column="43" TopLine="172"/>
+        <Caret Line="183" Column="41" TopLine="172"/>
       </Position26>
       <Position27>
-        <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="183" Column="41" TopLine="172"/>
-      </Position27>
-      <Position28>
         <Filename Value="PascalSteg.lpr"/>
         <Caret Line="21" TopLine="4"/>
+      </Position27>
+      <Position28>
+        <Filename Value="formpascalsteg.pas"/>
+        <Caret Line="183" Column="41" TopLine="172"/>
       </Position28>
       <Position29>
         <Filename Value="formpascalsteg.pas"/>
-        <Caret Line="183" Column="41" TopLine="172"/>
-      </Position29>
-      <Position30>
-        <Filename Value="formpascalsteg.pas"/>
         <Caret Line="181" Column="39" TopLine="172"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
