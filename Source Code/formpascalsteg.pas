@@ -195,7 +195,7 @@ procedure TForm1.saveButtonClick(Sender: TObject);
 begin
   if (savePictureDialog.Execute) then
   begin
-    originalImage1.Picture.SaveToFile(savePictureDialog.FileName);
+    embedImage1.Picture.SaveToFile(savePictureDialog.FileName);
   end;
 end;
 
