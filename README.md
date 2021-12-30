@@ -1,7 +1,4 @@
 # PascalSteg
-<<<<<<< HEAD
-A stegsolve like steganography tools as a final year project made in Pascal language
-=======
 A steganography tools for final exam project, made in Pascal programming language.
 
 > Steganography is a deliberate concealment of data within other data, as by embedding digitized text in a digitized image.
@@ -38,4 +35,3 @@ For best recommendation, please use an image with minimum resolution 250x250 </b
 Feel free to contribute to our project :D </br>
 
 ![tutorial](./tutorial.gif)
->>>>>>> development
