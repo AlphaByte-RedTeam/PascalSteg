@@ -23,10 +23,7 @@ type
   bits = array[1..MAX_BITS_COUNT] of byte;
   TForm1 = class(TForm)
     btnLoad: TButton;
-<<<<<<< HEAD
-=======
     extractionButton: TButton;
->>>>>>> development
     EXTRACTION: TLabel;
     embedImage2: TImage;
     EMBEDDING: TLabel;
@@ -44,20 +41,11 @@ type
     openPictureDialog: TOpenPictureDialog;
     savePictureDialog: TSavePictureDialog;
     procedure btnLoadClick(Sender: TObject);
-<<<<<<< HEAD
-    procedure closeButtonClick(Sender: TObject);
-    procedure embedTextChange(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure originalImage1Click(Sender: TObject);
-    procedure embedImage1Click(Sender: TObject);
-    procedure saveButtonClick(Sender: TObject);
-=======
     procedure extractionButtonClick(Sender: TObject);
     procedure closeButtonClick(Sender: TObject);
     procedure embedButtonClick(Sender: TObject);
     procedure saveButtonClick(Sender: TObject);
 
->>>>>>> development
   private
     {Private Declarations}
     function BitsToBytes(const bits:AnsiString): String;
@@ -174,41 +162,6 @@ begin
     end
 end;
 
-<<<<<<< HEAD
-procedure TForm1.saveButtonClick(Sender: TObject);
-begin
-  if (savePictureDialog.Execute) then
-  begin
-    embedImage1.Picture.SaveToFile(savePictureDialog.FileName);
-  end;
-end;
-
-procedure TForm1.embedTextChange(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.btnLoadClick(Sender: TObject);
-begin
-  if radioLoadOption.ItemIndex = 0 then
-  begin
-    if (openPictureDialog.Execute) then
-       originalImage1.Picture.LoadFromFile(openPictureDialog.FileName);
-  end
-
-  else
-  begin
-    if (openPictureDialog.Execute) then
-       embedImage2.Picture.LoadFromFile(openPictureDialog.FileName);
-  end;
-end;
-
-procedure TForm1.closeButtonClick(Sender: TObject);
-begin
-  close
-end;
-
-=======
 procedure TForm1.EmbedToBmp(const message: String; originalImage: TImage; embedImage: TImage);
 var
   bs: AnsiString;
@@ -370,5 +323,4 @@ begin
   EmbedToBmp(embedText.Text, originalImage1, embedImage1);
 end;
 
->>>>>>> development
 end.

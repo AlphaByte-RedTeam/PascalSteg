@@ -13,19 +13,9 @@ object Form1: TForm1
     Top = 400
     Width = 67
     Caption = 'Embed'
+    OnClick = embedButtonClick
     TabOrder = 0
   end
-<<<<<<< HEAD
-  object extractButton: TButton
-    Left = 528
-    Height = 25
-    Top = 806
-    Width = 75
-    Caption = 'Extract'
-    TabOrder = 1
-  end
-=======
->>>>>>> development
   object originalImage1: TImage
     Left = 248
     Height = 250
@@ -62,11 +52,7 @@ object Form1: TForm1
     Width = 75
     Caption = 'Save'
     OnClick = saveButtonClick
-<<<<<<< HEAD
-    TabOrder = 4
-=======
     TabOrder = 3
->>>>>>> development
   end
   object closeButton: TButton
     Left = 384
@@ -74,12 +60,8 @@ object Form1: TForm1
     Top = 24
     Width = 75
     Caption = 'Close'
-<<<<<<< HEAD
-    TabOrder = 5
-=======
     OnClick = closeButtonClick
     TabOrder = 4
->>>>>>> development
   end
   object embedImage2: TImage
     Left = 248
@@ -187,11 +169,7 @@ object Form1: TForm1
       'Load Embed'
       'Load Extract'
     )
-<<<<<<< HEAD
-    TabOrder = 6
-=======
     TabOrder = 5
->>>>>>> development
   end
   object btnLoad: TButton
     Left = 176
@@ -200,8 +178,6 @@ object Form1: TForm1
     Width = 75
     Caption = 'Load'
     OnClick = btnLoadClick
-<<<<<<< HEAD
-=======
     TabOrder = 6
   end
   object extractionButton: TButton
@@ -211,7 +187,6 @@ object Form1: TForm1
     Width = 67
     Caption = 'Extract'
     OnClick = extractionButtonClick
->>>>>>> development
     TabOrder = 7
   end
   object openPictureDialog: TOpenPictureDialog
