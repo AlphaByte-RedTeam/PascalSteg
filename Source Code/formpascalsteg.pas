@@ -118,34 +118,44 @@ var
   count: Word;
   flag: String;
 begin
-  bs := '';
-  SetLength(bs, MAX_BITS_COUNT);
-  bmp.Canvas.Lock;
+  bs := ''; // init blank value
+  SetLength(bs, MAX_BITS_COUNT); // set length of bs
+  bmp.Canvas.Lock; // lock the canvas
   count := 1;
   for y:=0 to bmp.Height-1 do
   begin
+    // if count is greater than MAX_BITS_COUNT
+    // then break
     if count > MAX_BITS_COUNT then
        break;
 
     for x:=0 to bmp.Width-1 do
     begin
+      // if count is greater than MAX_BITS_COUNT
       if count > MAX_BITS_COUNT then
          break;
-      pix := bmp.Canvas.Pixels[x,y];
-      pix := pix AND $00000001;
-      bs[count] := IntToStr(pix)[1];
+      pix := bmp.Canvas.Pixels[x,y]; // assign picture to pix
+      pix := pix AND $00000001; // do AND operation
+      bs[count] := IntToStr(pix)[1]; // convert the operated value to string
       inc(count);
     end;
   end;
 
-  bmp.Canvas.Unlock;
+  bmp.Canvas.Unlock; // unlock the canvas
+  // convert bs to bytes
+  // store to result
   Result := BitsToBytes(bs);
+  // internal use, don't check again
   if internal then
      exit;
-  flag := copy(Result, 1, length(FLAG_MARK));
 
+  flag := copy(Result, 1, length(FLAG_MARK)); // copy the FLAG_MARK to flag
+
+  // if flag is equal to FLAG_MARK
+  // then delete the FLAG
   if flag = FLAG_MARK then
      delete(Result, 1, length(FLAG_MARK))
+  // else, prompt alert message
   else
     begin
       ShowMessage('Bitmap is invalid or Secret Data is Missing');
